@@ -1,17 +1,17 @@
-version: 3
+version: "3.8"
 services:
   frontend:
-    image:  mjgargani/compose-example:frontend-trybe1.0
+    image: mjgargani/compose-example:frontend-trybe1.0
     restart: always
     ports:
-      - 3000:3000
+      - 3001:3001
     depends_on:
       - "backend"
   backend:
     image: mjgargani/compose-example:backend-trybe1.0
     restart: always
     ports:
-      - 30001:3001
+      - 3002:3002
     environment:
       - DB_HOST=database
     depends_on:
